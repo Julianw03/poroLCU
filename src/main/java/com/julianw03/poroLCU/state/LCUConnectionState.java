@@ -1,0 +1,9 @@
+package com.julianw03.poroLCU.state;
+
+public enum LCUConnectionState {
+    AWAITING_LEAGUE_PROCESS,
+    AWAITING_LCU_REST_READY,
+    AWAITING_LCU_WEBSOCKET_CONNECTED,
+    CONNECTED,
+    DISCONNECTED
+}
