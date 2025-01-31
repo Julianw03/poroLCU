@@ -71,6 +71,28 @@ public class ChallengesV1Impl implements ChallengesV1 {
     }
 
     @Override
+    public Function<LCUHttpConnector, LCUApiResponse<Map<Integer, ChallengeData>>> getUpdatedChallenges(Long GameId, Puuid puuid) {
+        return (lcuHttpConnector -> new LCUApiResponse<>(
+                lcuHttpConnector.sendApiRequest(
+                        HttpMethod.GET,
+                        BASE_PATH + "/updated-challenges/" + GameId + "/" + puuid,
+                        null
+                ), new TypeReference<Map<Integer, ChallengeData>>() {})
+        );
+    }
+
+    @Override
+    public Function<LCUHttpConnector, LCUApiResponse<Map<Integer, ChallengeData>>> getMyUpdatedChallenges(Long GameId) {
+        return (lcuHttpConnector -> new LCUApiResponse<>(
+                lcuHttpConnector.sendApiRequest(
+                        HttpMethod.GET,
+                        BASE_PATH + "/my-updated-challenges/" + GameId,
+                        null
+                ), new TypeReference<Map<Integer, ChallengeData>>() {})
+        );
+    }
+
+    @Override
     public Function<LCUHttpConnector, LCUApiResponse<List<ChallengeSeason>>> getSeasons() {
         return (lcuHttpConnector -> new LCUApiResponse<>(
                 lcuHttpConnector.sendApiRequest(
