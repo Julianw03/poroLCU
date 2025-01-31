@@ -41,7 +41,7 @@ List of plugins and their support status
     - v1 ![](https://img.shields.io/badge/none-darkred)
     - v2 ![](https://img.shields.io/badge/none-darkred)
 - lol-client-config ![](https://img.shields.io/badge/none-darkred)
-- lol-collections ![](https://img.shields.io/badge/none-darkred)
+- lol-collections ![](https://img.shields.io/badge/mostly-lightgreen)
 - lol-content-targeting ![](https://img.shields.io/badge/none-darkred)
 - lol-cosmetics ![](https://img.shields.io/badge/none-darkred)
 - lol-drops ![](https://img.shields.io/badge/none-darkred)
