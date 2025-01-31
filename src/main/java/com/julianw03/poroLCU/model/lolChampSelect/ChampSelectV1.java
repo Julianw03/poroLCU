@@ -1,5 +1,6 @@
 package com.julianw03.poroLCU.model.lolChampSelect;
 
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.julianw03.poroLCU.connection.http.LCUApiResponse;
 import com.julianw03.poroLCU.connection.http.LCUHttpConnector;
 import com.julianw03.poroLCU.model.PluginInterface;
@@ -10,7 +11,7 @@ import java.util.function.Function;
 public interface ChampSelectV1 extends PluginInterface {
     Function<LCUHttpConnector, LCUApiResponse<List<GridChampion>>> getAllGridChampions();
 
-    Function<LCUHttpConnector, LCUApiResponse<List<Integer>>> getBannedChampionIds();
+    Function<LCUHttpConnector, LCUApiResponse<List<Integer>>> getBannableChampionIds();
 
     Function<LCUHttpConnector, LCUApiResponse<Void>> launchBattleTraining();
 
@@ -22,19 +23,19 @@ public interface ChampSelectV1 extends PluginInterface {
 
     Function<LCUHttpConnector, LCUApiResponse<List<MutedPlayer>>> getMutedPlayers();
 
-    //Function<LCUHttpConnector, LCUApiResponse<Swap>> getOngoingSwaps();
+    Function<LCUHttpConnector, LCUApiResponse<Swap>> getOngoingSwaps();
 
-    //Function<LCUHttpConnector, LCUApiResponse<?>> clearOngoingSwap(Integer id);
+    Function<LCUHttpConnector, LCUApiResponse<Void>> clearOngoingSwap(Integer id);
 
     Function<LCUHttpConnector, LCUApiResponse<Trade>> getOngoingTrade();
 
-    Function<LCUHttpConnector, LCUApiResponse<?>> clearOngoingTrade(Integer id);
+    Function<LCUHttpConnector, LCUApiResponse<Void>> clearOngoingTrade(Integer id);
 
     Function<LCUHttpConnector, LCUApiResponse<Integer>> getPickableChampionIds();
 
     Function<LCUHttpConnector, LCUApiResponse<Integer>> getPickableSkinIds();
 
-    Function<LCUHttpConnector, LCUApiResponse<?>> getPinDropNotification();
+    Function<LCUHttpConnector, LCUApiResponse<PinDropNotification>> getPinDropNotification();
 
     Function<LCUHttpConnector, LCUApiResponse<?>> getLastGameDTO();
 
@@ -48,7 +49,7 @@ public interface ChampSelectV1 extends PluginInterface {
 
     Function<LCUHttpConnector, LCUApiResponse<Session.TeamMember>> getMySelection();
 
-    Function<LCUHttpConnector, LCUApiResponse<?>> updateMySelection(Integer championId);
+    Function<LCUHttpConnector, LCUApiResponse<?>> updateMySelection(MySelection mySelection);
 
     Function<LCUHttpConnector, LCUApiResponse<Void>> rerollSelection();
 
@@ -88,7 +89,7 @@ public interface ChampSelectV1 extends PluginInterface {
     //TODO: Check if return type is correct
     Function<LCUHttpConnector, LCUApiResponse<Void>> requestTradeRequest(Integer tradeId);
 
-    Function<LCUHttpConnector, LCUApiResponse<Void>> getSFXNotifications();
+    Function<LCUHttpConnector, LCUApiResponse<ArrayNode>> getSFXNotifications();
 
     Function<LCUHttpConnector, LCUApiResponse<List<SkinCarouselItem>>> getSkinCarouselSkins();
 
@@ -100,7 +101,7 @@ public interface ChampSelectV1 extends PluginInterface {
 
     Function<LCUHttpConnector, LCUApiResponse<Void>> buyTeamBoost();
 
-    Function<LCUHttpConnector, LCUApiResponse<Void>> togglePositionFavorite(Integer championId, String position);
+    Function<LCUHttpConnector, LCUApiResponse<Void>> togglePositionFavorite(Integer championId, Position position);
 
     Function<LCUHttpConnector, LCUApiResponse<Void>> togglePlayerMuted(MutedPlayer player);
 }

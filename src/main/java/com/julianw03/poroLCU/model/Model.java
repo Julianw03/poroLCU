@@ -14,6 +14,10 @@ import com.julianw03.poroLCU.model.lolChallenges.v1.ChallengesV1;
 import com.julianw03.poroLCU.model.lolChallenges.v1.impl.ChallengesV1Impl;
 import com.julianw03.poroLCU.model.lolChallenges.v2.ChallengesV2;
 import com.julianw03.poroLCU.model.lolChallenges.v2.impl.ChallengesV2Impl;
+import com.julianw03.poroLCU.model.lolChampSelect.ChampSelectV1;
+import com.julianw03.poroLCU.model.lolChampSelect.impl.ChampSelectV1Impl;
+import com.julianw03.poroLCU.model.lolChampionMastery.v1.ChampionMasteryV1;
+import com.julianw03.poroLCU.model.lolChampionMastery.v1.impl.ChampionMasteryV1Impl;
 import com.julianw03.poroLCU.model.lolHonorV2.v1.HonorV2V1;
 import com.julianw03.poroLCU.model.lolHonorV2.v1.impl.HonorV2V1Impl;
 import com.julianw03.poroLCU.model.lolHovercard.v1.HovercardV1;
@@ -38,6 +42,9 @@ public class Model {
         addToLookup(BannersV1.class, new BannersV1Impl());
         addToLookup(ChallengesV1.class, new ChallengesV1Impl());
         addToLookup(ChallengesV2.class, new ChallengesV2Impl());
+        addToLookup(ChampSelectV1.class, new ChampSelectV1Impl());
+        addToLookup(ChampionMasteryV1.class, new ChampionMasteryV1Impl());
+
         addToLookup(HovercardV1.class, new HovercardV1Impl());
         addToLookup(KickoutV1.class, new KickoutV1Impl());
         addToLookup(Riotclient.class, new RiotclientImpl());
@@ -52,5 +59,6 @@ public class Model {
         return (T) map.get(clazz);
     }
 
-    private Model() {}
+    private Model() {
+    }
 }

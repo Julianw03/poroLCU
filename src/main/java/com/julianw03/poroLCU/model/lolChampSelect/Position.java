@@ -1,9 +1,11 @@
 package com.julianw03.poroLCU.model.lolChampSelect;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import lombok.Getter;
 
 import java.util.Optional;
 
+@Getter
 public enum Position {
     TOP("TOP", "top"),
     JUNGLE("JUNGLE", "jungle"),

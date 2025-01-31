@@ -32,7 +32,7 @@ List of plugins and their support status
     - v2 ![](https://img.shields.io/badge/complete-darkgreen)
 - lol-champ-select ![](https://img.shields.io/badge/mostly-lightgreen)
 - lol-champ-select-legacy ![](https://img.shields.io/badge/none-darkred)
-- lol-champion-mastery ![](https://img.shields.io/badge/none-darkred)
+- lol-champion-mastery ![](https://img.shields.io/badge/mostly-lightgreen)
 - lol-champions ![](https://img.shields.io/badge/none-darkred)
 - lol-chat ![](https://img.shields.io/badge/none-darkred)
     - v1 ![](https://img.shields.io/badge/none-darkred)
