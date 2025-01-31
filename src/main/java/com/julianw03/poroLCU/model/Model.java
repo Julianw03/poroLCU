@@ -14,18 +14,16 @@ import com.julianw03.poroLCU.model.lolChallenges.v1.ChallengesV1;
 import com.julianw03.poroLCU.model.lolChallenges.v1.impl.ChallengesV1Impl;
 import com.julianw03.poroLCU.model.lolChallenges.v2.ChallengesV2;
 import com.julianw03.poroLCU.model.lolChallenges.v2.impl.ChallengesV2Impl;
-import com.julianw03.poroLCU.model.lolChampSelect.ChampSelectV1;
-import com.julianw03.poroLCU.model.lolChampSelect.impl.ChampSelectV1Impl;
+import com.julianw03.poroLCU.model.lolChampSelect.v1.ChampSelectV1;
+import com.julianw03.poroLCU.model.lolChampSelect.v1.impl.ChampSelectV1Impl;
 import com.julianw03.poroLCU.model.lolChampionMastery.v1.ChampionMasteryV1;
 import com.julianw03.poroLCU.model.lolChampionMastery.v1.impl.ChampionMasteryV1Impl;
-import com.julianw03.poroLCU.model.lolHonorV2.v1.HonorV2V1;
-import com.julianw03.poroLCU.model.lolHonorV2.v1.impl.HonorV2V1Impl;
+import com.julianw03.poroLCU.model.lolChampions.v1.ChampionsV1;
+import com.julianw03.poroLCU.model.lolChampions.v1.impl.ChampionsV1Impl;
 import com.julianw03.poroLCU.model.lolHovercard.v1.HovercardV1;
 import com.julianw03.poroLCU.model.lolHovercard.v1.impl.HovercardV1Impl;
 import com.julianw03.poroLCU.model.lolKickout.KickoutV1;
 import com.julianw03.poroLCU.model.lolKickout.impl.KickoutV1Impl;
-import com.julianw03.poroLCU.model.lolMatchmaking.v1.MatchmakingV1;
-import com.julianw03.poroLCU.model.lolMatchmaking.v1.impl.MatchmakingV1Impl;
 import com.julianw03.poroLCU.model.riotclient.Riotclient;
 import com.julianw03.poroLCU.model.riotclient.impl.RiotclientImpl;
 
@@ -44,10 +42,7 @@ public class Model {
         addToLookup(ChallengesV2.class, new ChallengesV2Impl());
         addToLookup(ChampSelectV1.class, new ChampSelectV1Impl());
         addToLookup(ChampionMasteryV1.class, new ChampionMasteryV1Impl());
-
-        addToLookup(HovercardV1.class, new HovercardV1Impl());
-        addToLookup(KickoutV1.class, new KickoutV1Impl());
-        addToLookup(Riotclient.class, new RiotclientImpl());
+        addToLookup(ChampionsV1.class, new ChampionsV1Impl());
     }
 
     private static <T extends PluginInterface> void addToLookup(Class<T> clazz, T obj) {

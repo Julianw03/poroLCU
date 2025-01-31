@@ -1,4 +1,4 @@
-package com.julianw03.poroLCU.model.lolChampSelect.impl;
+package com.julianw03.poroLCU.model.lolChampSelect.v1.impl;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.julianw03.poroLCU.connection.http.HttpMethod;
 import com.julianw03.poroLCU.connection.http.LCUApiResponse;
 import com.julianw03.poroLCU.connection.http.LCUHttpConnector;
-import com.julianw03.poroLCU.model.lolChampSelect.*;
+import com.julianw03.poroLCU.model.lolChampSelect.v1.*;
 
 import java.util.List;
 import java.util.function.Function;

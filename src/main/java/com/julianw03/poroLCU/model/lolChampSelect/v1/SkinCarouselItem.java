@@ -1,32 +1,15 @@
-package com.julianw03.poroLCU.model.lolChampSelect;
+package com.julianw03.poroLCU.model.lolChampSelect.v1;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.julianw03.poroLCU.model.shared.Ownership;
 import lombok.Getter;
 
 import java.util.List;
 
 @Getter
 public class SkinCarouselItem {
-    @Getter
-    public static class Ownership {
-        @Getter
-        public static class Rental {
-            private Boolean rented;
-
-            private Rental() {
-            }
-        }
-
-        private Boolean loyaltyReward;
-        private Boolean owned;
-        private Boolean xboxGPReward;
-
-        private Ownership() {
-        }
-    }
-
     private Integer                championId;
     private List<SkinCarouselItem> childSkins;
     private String                 ChromaPreviewPath;

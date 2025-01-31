@@ -1,4 +1,4 @@
-package com.julianw03.poroLCU.model.lolChampSelect;
+package com.julianw03.poroLCU.model.lolChampSelect.v1;
 
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.julianw03.poroLCU.connection.http.LCUApiResponse;

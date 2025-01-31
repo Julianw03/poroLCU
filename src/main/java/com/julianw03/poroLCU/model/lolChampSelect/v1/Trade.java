@@ -1,10 +1,9 @@
-package com.julianw03.poroLCU.model.lolChampSelect;
+package com.julianw03.poroLCU.model.lolChampSelect.v1;
 
 import lombok.Getter;
 
 @Getter
-public class Swap {
-    @Getter
+public class Trade {
     public enum State {
         AVAILABLE,
         SENT,
@@ -18,4 +17,7 @@ public class Swap {
     private Integer cellId;
     private Integer id;
     private State   state;
+
+    private Trade() {
+    }
 }

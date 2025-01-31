@@ -1,4 +1,4 @@
-package com.julianw03.poroLCU.model.lolChampSelect;
+package com.julianw03.poroLCU.model.lolChampSelect.v1;
 
 import lombok.Getter;
 import lombok.Setter;

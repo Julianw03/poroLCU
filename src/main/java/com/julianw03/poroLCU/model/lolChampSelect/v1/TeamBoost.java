@@ -1,4 +1,4 @@
-package com.julianw03.poroLCU.model.lolChampSelect;
+package com.julianw03.poroLCU.model.lolChampSelect.v1;
 
 import com.julianw03.poroLCU.model.shared.puuid.Puuid;
 import com.julianw03.poroLCU.model.shared.summonerId.SummonerId;
