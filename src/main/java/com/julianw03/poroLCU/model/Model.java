@@ -24,12 +24,8 @@ import com.julianw03.poroLCU.model.lolClientConfig.v3.ClientConfigV3;
 import com.julianw03.poroLCU.model.lolClientConfig.v3.impl.ClientConfigV3Impl;
 import com.julianw03.poroLCU.model.lolCollections.v1.CollectionsV1;
 import com.julianw03.poroLCU.model.lolCollections.v1.impl.CollectionsV1Impl;
-import com.julianw03.poroLCU.model.lolHovercard.v1.HovercardV1;
-import com.julianw03.poroLCU.model.lolHovercard.v1.impl.HovercardV1Impl;
-import com.julianw03.poroLCU.model.lolKickout.KickoutV1;
-import com.julianw03.poroLCU.model.lolKickout.impl.KickoutV1Impl;
-import com.julianw03.poroLCU.model.riotclient.Riotclient;
-import com.julianw03.poroLCU.model.riotclient.impl.RiotclientImpl;
+import com.julianw03.poroLCU.model.lolContentTargeting.v1.ContentTargetingV1;
+import com.julianw03.poroLCU.model.lolContentTargeting.v1.impl.ContentTargetingV1Impl;
 
 import java.util.HashMap;
 
@@ -49,6 +45,7 @@ public class Model {
         addToLookup(ChampionsV1.class, new ChampionsV1Impl());
         addToLookup(ClientConfigV3.class, new ClientConfigV3Impl());
         addToLookup(CollectionsV1.class, new CollectionsV1Impl());
+        addToLookup(ContentTargetingV1.class, new ContentTargetingV1Impl());
     }
 
     private static <T extends PluginInterface> void addToLookup(Class<T> clazz, T obj) {
