@@ -22,6 +22,8 @@ import com.julianw03.poroLCU.model.lolChampions.v1.ChampionsV1;
 import com.julianw03.poroLCU.model.lolChampions.v1.impl.ChampionsV1Impl;
 import com.julianw03.poroLCU.model.lolClientConfig.v3.ClientConfigV3;
 import com.julianw03.poroLCU.model.lolClientConfig.v3.impl.ClientConfigV3Impl;
+import com.julianw03.poroLCU.model.lolCollections.v1.CollectionsV1;
+import com.julianw03.poroLCU.model.lolCollections.v1.impl.CollectionsV1Impl;
 import com.julianw03.poroLCU.model.lolHovercard.v1.HovercardV1;
 import com.julianw03.poroLCU.model.lolHovercard.v1.impl.HovercardV1Impl;
 import com.julianw03.poroLCU.model.lolKickout.KickoutV1;
@@ -46,6 +48,7 @@ public class Model {
         addToLookup(ChampionMasteryV1.class, new ChampionMasteryV1Impl());
         addToLookup(ChampionsV1.class, new ChampionsV1Impl());
         addToLookup(ClientConfigV3.class, new ClientConfigV3Impl());
+        addToLookup(CollectionsV1.class, new CollectionsV1Impl());
     }
 
     private static <T extends PluginInterface> void addToLookup(Class<T> clazz, T obj) {
