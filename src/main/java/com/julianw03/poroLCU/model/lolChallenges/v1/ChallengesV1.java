@@ -20,6 +20,10 @@ public interface ChallengesV1 extends PluginInterface {
 
     Function<LCUHttpConnector, LCUApiResponse<Map<ChallengeLevel, Integer>>> getLevelPoints();
 
+    Function<LCUHttpConnector, LCUApiResponse<Map<Integer, ChallengeData>>> getUpdatedChallenges(Long GameId, Puuid puuid);
+
+    Function<LCUHttpConnector, LCUApiResponse<Map<Integer, ChallengeData>>> getMyUpdatedChallenges(Long GameId);
+
     Function<LCUHttpConnector, LCUApiResponse<List<ChallengeSeason>>> getSeasons();
 
     Function<LCUHttpConnector, LCUApiResponse<ChallengeSummary>> getLocalPlayerChallengeSummary();
