@@ -42,7 +42,7 @@ List of plugins and their support status
     - v2 ![](https://img.shields.io/badge/none-darkred)
 - lol-client-config ![](https://img.shields.io/badge/mostly-lightgreen)
 - lol-collections ![](https://img.shields.io/badge/complete-darkgreen)
-- lol-content-targeting ![](https://img.shields.io/badge/none-darkred)
+- lol-content-targeting ![](https://img.shields.io/badge/complete-darkgreen)
 - lol-cosmetics ![](https://img.shields.io/badge/none-darkred)
 - lol-drops ![](https://img.shields.io/badge/none-darkred)
 - lol-dx9-deprecation ![](https://img.shields.io/badge/none-darkred)

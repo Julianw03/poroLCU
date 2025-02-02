@@ -72,13 +72,13 @@ public class Core implements CoreFacade {
             case DISCONNECTED -> handleDisconnected();
             default -> log.warn("Unhandled state transition to {}", newState);
         }
-        for (ConnectionStateListener listener : connectionStateListeners) {
+        connectionStateListeners.forEach(listener -> {
             try {
                 listener.onConnectionState(connectionState);
             } catch (Exception e) {
                 log.error("Error while notifying connection state listener", e);
             }
-        }
+        });
     }
 
     private void stop(ExitReason reason) {
@@ -183,11 +183,13 @@ public class Core implements CoreFacade {
 
     @Override
     public boolean addConnectionStateListener(ConnectionStateListener listener) {
+        log.info("Registered new Listener");
         return connectionStateListeners.add(listener);
     }
 
     @Override
     public boolean removeConnectionStateListener(ConnectionStateListener listener) {
+        log.info("Unregistered Listener");
         return connectionStateListeners.remove(listener);
     }
 
