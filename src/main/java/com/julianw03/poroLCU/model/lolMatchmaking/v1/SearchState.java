@@ -1,15 +1,19 @@
 package com.julianw03.poroLCU.model.lolMatchmaking.v1;
 
 import com.julianw03.poroLCU.model.shared.summonerId.SummonerId;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 public class SearchState {
+    @Getter
     public static class DodgeData {
         private SummonerId dodgerId;
         private String     state;
     }
 
+    @Getter
     public static class Error {
         private String     errorCode;
         private int        id;
@@ -20,6 +24,7 @@ public class SearchState {
         private Error() {}
     }
 
+    @Getter
     public static class LowPriorityData {
         private String           bustedLeaverAccessToken;
         private List<SummonerId> penalizedSummonerIds;

@@ -1,6 +1,7 @@
 package com.julianw03.poroLCU.model.lolCollections.v1.impl;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.julianw03.poroLCU.Util.Utils;
 import com.julianw03.poroLCU.connection.http.HttpMethod;
 import com.julianw03.poroLCU.connection.http.LCUApiResponse;
 import com.julianw03.poroLCU.connection.http.LCUHttpConnector;
@@ -22,7 +23,7 @@ public class CollectionsV1Impl implements CollectionsV1 {
         return lcuHttpConnector -> new LCUApiResponse<>(
                 lcuHttpConnector.sendApiRequest(
                         HttpMethod.GET,
-                        BASE_PATH + "/inventories/" + summonerId + "/backdrop",
+                        Utils.createPath(BASE_PATH, "inventories", summonerId.toString(), "backdrop"),
                         null
                 ), BackdropInfo.class
         );
@@ -33,7 +34,7 @@ public class CollectionsV1Impl implements CollectionsV1 {
         return lcuHttpConnector -> new LCUApiResponse<>(
                 lcuHttpConnector.sendApiRequest(
                         HttpMethod.GET,
-                        BASE_PATH + "/inventories/" + summonerId + "/spells",
+                        Utils.createPath(BASE_PATH, "inventories", summonerId.toString(), "spells"),
                         null
                 ), SpellInfo.class
         );
@@ -44,7 +45,7 @@ public class CollectionsV1Impl implements CollectionsV1 {
         return lcuHttpConnector -> new LCUApiResponse<>(
                 lcuHttpConnector.sendApiRequest(
                         HttpMethod.GET,
-                        BASE_PATH + "/inventories/" + summonerId + "/ward-skins",
+                        Utils.createPath(BASE_PATH, "inventories", summonerId.toString(), "ward-skins"),
                         null
                 ), new TypeReference<List<WardSkin>>() {}
         );
@@ -55,7 +56,7 @@ public class CollectionsV1Impl implements CollectionsV1 {
         return lcuHttpConnector -> new LCUApiResponse<>(
                 lcuHttpConnector.sendApiRequest(
                         HttpMethod.GET,
-                        BASE_PATH + "/inventories/" + summonerId + "/ward-skins/" + wardSkinId,
+                        Utils.createPath(BASE_PATH, "inventories", summonerId.toString(), "ward-skins", wardSkinId.toString()),
                         null
                 ), WardSkin.class
         );

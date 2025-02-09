@@ -6,6 +6,7 @@ import lombok.Getter;
 public class Trade {
     public enum State {
         AVAILABLE,
+        BUSY,
         SENT,
         RECEIVED,
         INVALID;

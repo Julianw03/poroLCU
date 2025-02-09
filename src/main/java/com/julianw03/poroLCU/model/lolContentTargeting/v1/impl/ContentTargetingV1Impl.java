@@ -1,5 +1,6 @@
 package com.julianw03.poroLCU.model.lolContentTargeting.v1.impl;
 
+import com.julianw03.poroLCU.Util.Utils;
 import com.julianw03.poroLCU.connection.http.HttpMethod;
 import com.julianw03.poroLCU.connection.http.LCUApiResponse;
 import com.julianw03.poroLCU.connection.http.LCUHttpConnector;
@@ -18,7 +19,7 @@ public class ContentTargetingV1Impl implements ContentTargetingV1 {
         return lcuHttpConnector -> new LCUApiResponse<>(
                 lcuHttpConnector.sendApiRequest(
                         HttpMethod.GET,
-                        BASE_PATH + "/filters",
+                        Utils.createPath(BASE_PATH, "filters"),
                         null
                 ), FilterInfo.class);
     }
@@ -28,7 +29,7 @@ public class ContentTargetingV1Impl implements ContentTargetingV1 {
         return lcuHttpConnector -> new LCUApiResponse<>(
                 lcuHttpConnector.sendApiRequest(
                         HttpMethod.GET,
-                        BASE_PATH + "/locale",
+                        Utils.createPath(BASE_PATH, "locale"),
                         null
                 ), LocaleInfo.class);
     }
@@ -38,7 +39,7 @@ public class ContentTargetingV1Impl implements ContentTargetingV1 {
         return lcuHttpConnector -> new LCUApiResponse<>(
                 lcuHttpConnector.sendApiRequest(
                         HttpMethod.GET,
-                        BASE_PATH + "/protected_filters",
+                        Utils.createPath(BASE_PATH, "protected_filters"),
                         null
                 ), FilterInfo.class);
     }

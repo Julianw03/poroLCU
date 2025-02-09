@@ -101,4 +101,14 @@ public final class Utils {
         return true;
     }
 
+    public static String createPath(String basePath, String... pathParams) {
+        StringBuilder sb = new StringBuilder(basePath);
+        for (String s : pathParams) {
+            sb.append('/');
+            sb.append(s);
+        }
+
+        return sb.toString();
+    }
+
 }

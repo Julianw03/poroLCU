@@ -12,6 +12,5 @@ public class WardSkin {
     private String    wardImagePath;
     private String    wardShadowImagePath;
 
-    private WardSkin() {
-    }
+    private WardSkin() {}
 }
