@@ -4,8 +4,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.julianw03.poroLCU.connection.http.HttpMethod;
 import com.julianw03.poroLCU.connection.http.LCUApiResponse;
 import com.julianw03.poroLCU.connection.http.LCUHttpConnector;
-import com.julianw03.poroLCU.model.lolHovercard.v1.FriendHovercardInfo;
 import com.julianw03.poroLCU.model.lolHovercard.v1.HovercardV1;
+import com.julianw03.poroLCU.model.shared.SocialInfo.SocialInfo;
 import com.julianw03.poroLCU.model.shared.puuid.Puuid;
 import com.julianw03.poroLCU.model.shared.summonerId.SummonerId;
 
@@ -17,7 +17,7 @@ public class HovercardV1Impl implements HovercardV1 {
     private static final String RELATIVE_PATH = "/lol-hovercard/v1";
 
     @Override
-    public Function<LCUHttpConnector, LCUApiResponse<FriendHovercardInfo>> getFriendInfo(SummonerId summonerId) {
+    public Function<LCUHttpConnector, LCUApiResponse<SocialInfo>> getFriendInfo(SummonerId summonerId) {
         return (
                 lcuHttpConnector -> {
                     HttpResponse<JsonNode> response = lcuHttpConnector.sendApiRequest(
@@ -26,13 +26,13 @@ public class HovercardV1Impl implements HovercardV1 {
                             null
                     );
 
-                    return new LCUApiResponse<>(response, FriendHovercardInfo.class);
+                    return new LCUApiResponse<>(response, SocialInfo.class);
                 }
         );
     }
 
     @Override
-    public Function<LCUHttpConnector, LCUApiResponse<FriendHovercardInfo>> getFriendInfo(Puuid puuid) {
+    public Function<LCUHttpConnector, LCUApiResponse<SocialInfo>> getFriendInfo(Puuid puuid) {
         return (
                 lcuHttpConnector -> {
                     HttpResponse<JsonNode> response = lcuHttpConnector.sendApiRequest(
@@ -41,7 +41,7 @@ public class HovercardV1Impl implements HovercardV1 {
                             null
                     );
 
-                    return new LCUApiResponse<>(response, FriendHovercardInfo.class);
+                    return new LCUApiResponse<>(response, SocialInfo.class);
                 }
         );
     }

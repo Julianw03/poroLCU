@@ -7,6 +7,7 @@ public class Swap {
     @Getter
     public enum State {
         AVAILABLE,
+        BUSY,
         SENT,
         RECEIVED,
         INVALID;

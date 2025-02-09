@@ -1,6 +1,5 @@
 package com.julianw03.poroLCU;
 
-import com.julianw03.poroLCU.Util.Utils;
 import com.julianw03.poroLCU.configuration.Configuration;
 import com.julianw03.poroLCU.connection.http.LCUApiResponse;
 import com.julianw03.poroLCU.connection.http.LCUHttpConnector;
