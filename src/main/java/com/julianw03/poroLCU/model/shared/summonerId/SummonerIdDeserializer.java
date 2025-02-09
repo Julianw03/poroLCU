@@ -10,7 +10,7 @@ import java.io.IOException;
 public class SummonerIdDeserializer extends JsonDeserializer<SummonerId> {
     @Override
     public SummonerId deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
-        int id = jsonParser.getIntValue();
+        Long id = jsonParser.getLongValue();
         return new SummonerId(id);
     }
 }

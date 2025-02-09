@@ -24,6 +24,12 @@ import com.julianw03.poroLCU.model.lolChat.v1.ChatV1;
 import com.julianw03.poroLCU.model.lolChat.v1.impl.ChatV1Impl;
 import com.julianw03.poroLCU.model.lolChat.v2.ChatV2;
 import com.julianw03.poroLCU.model.lolChat.v2.impl.ChatV2Impl;
+import com.julianw03.poroLCU.model.lolClientConfig.v3.ClientConfigV3;
+import com.julianw03.poroLCU.model.lolClientConfig.v3.impl.ClientConfigV3Impl;
+import com.julianw03.poroLCU.model.lolCollections.v1.CollectionsV1;
+import com.julianw03.poroLCU.model.lolCollections.v1.impl.CollectionsV1Impl;
+import com.julianw03.poroLCU.model.lolContentTargeting.v1.ContentTargetingV1;
+import com.julianw03.poroLCU.model.lolContentTargeting.v1.impl.ContentTargetingV1Impl;
 
 import java.util.HashMap;
 
@@ -32,6 +38,7 @@ public class Model {
 
     static {
         addToLookup(DeepLinkV1.class, new DeepLinkV1Impl());
+
         addToLookup(AccountVerificationV1.class, new AccountVerificationV1Impl());
         addToLookup(ActiveBoostsV1.class, new ActiveBoostsV1Impl());
         addToLookup(ActivityCenterV1.class, new ActivityCenterV1Impl());
@@ -43,6 +50,9 @@ public class Model {
         addToLookup(ChampionsV1.class, new ChampionsV1Impl());
         addToLookup(ChatV1.class, new ChatV1Impl());
         addToLookup(ChatV2.class, new ChatV2Impl());
+        addToLookup(ClientConfigV3.class, new ClientConfigV3Impl());
+        addToLookup(CollectionsV1.class, new CollectionsV1Impl());
+        addToLookup(ContentTargetingV1.class, new ContentTargetingV1Impl());
     }
 
     private static <T extends PluginInterface> void addToLookup(Class<T> clazz, T obj) {

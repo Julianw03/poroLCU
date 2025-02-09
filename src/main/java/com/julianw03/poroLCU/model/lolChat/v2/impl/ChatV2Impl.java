@@ -22,7 +22,7 @@ public class ChatV2Impl implements ChatV2 {
         return lcuHttpConnector -> new LCUApiResponse<>(
                 lcuHttpConnector.sendApiRequest(
                         HttpMethod.GET,
-                        Utils.createPath(BASE_PATH, "/friend-requests"),
+                        Utils.createPath(BASE_PATH, "friend-requests"),
                         null
                 ), new TypeReference<List<FriendRequest>>() {}
         );
@@ -33,7 +33,7 @@ public class ChatV2Impl implements ChatV2 {
         return lcuHttpConnector -> new LCUApiResponse<>(
                 lcuHttpConnector.sendApiRequest(
                         HttpMethod.GET,
-                        Utils.createPath(BASE_PATH, "/friend-requests"),
+                        Utils.createPath(BASE_PATH, "friend-requests"),
                         friendRequest
                 ), Void.class
         );
@@ -44,7 +44,7 @@ public class ChatV2Impl implements ChatV2 {
         return lcuHttpConnector -> new LCUApiResponse<>(
                 lcuHttpConnector.sendApiRequest(
                         HttpMethod.DELETE,
-                        Utils.createPath(BASE_PATH, "/friend-requests/" + puuid.getValue()),
+                        Utils.createPath(BASE_PATH, "friend-requests", puuid.getValue()),
                         null
                 ), Void.class
         );

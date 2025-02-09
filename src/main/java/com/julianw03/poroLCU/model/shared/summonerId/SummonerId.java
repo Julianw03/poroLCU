@@ -6,8 +6,8 @@ import com.julianw03.poroLCU.Util.Wrapper;
 
 @JsonSerialize(using = SummonerIdSerializer.class)
 @JsonDeserialize(using = SummonerIdDeserializer.class)
-public class SummonerId extends Wrapper<Integer> {
-    public SummonerId(Integer value) {
+public class SummonerId extends Wrapper<Long> {
+    public SummonerId(Long value) {
         super(value);
     }
 }

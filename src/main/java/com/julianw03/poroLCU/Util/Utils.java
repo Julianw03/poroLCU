@@ -104,6 +104,7 @@ public final class Utils {
     public static String createPath(String basePath, String... pathParams) {
         StringBuilder sb = new StringBuilder(basePath);
         for (String s : pathParams) {
+            sb.append('/');
             sb.append(s);
         }
 
