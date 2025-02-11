@@ -10,7 +10,7 @@ import java.io.IOException;
 public class StringifiedIntegerDeserializer extends JsonDeserializer<StringifiedInteger> {
     @Override
     public StringifiedInteger deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
-        String value = jsonParser.readValueAs(String.class);
+        String value = jsonParser.getText();
         return new StringifiedInteger(value);
     }
 }

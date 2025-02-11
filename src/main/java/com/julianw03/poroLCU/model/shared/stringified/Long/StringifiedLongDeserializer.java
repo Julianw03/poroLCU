@@ -10,7 +10,7 @@ import java.io.IOException;
 public class StringifiedLongDeserializer extends JsonDeserializer<StringifiedLong> {
     @Override
     public StringifiedLong deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
-        String value = jsonParser.readValueAs(String.class);
+        String value = jsonParser.getText();
         return new StringifiedLong(value);
     }
 }

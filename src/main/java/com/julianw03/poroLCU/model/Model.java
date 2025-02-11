@@ -30,6 +30,10 @@ import com.julianw03.poroLCU.model.lolCollections.v1.CollectionsV1;
 import com.julianw03.poroLCU.model.lolCollections.v1.impl.CollectionsV1Impl;
 import com.julianw03.poroLCU.model.lolContentTargeting.v1.ContentTargetingV1;
 import com.julianw03.poroLCU.model.lolContentTargeting.v1.impl.ContentTargetingV1Impl;
+import com.julianw03.poroLCU.model.lolCosmetics.v1.CosmeticsV1;
+import com.julianw03.poroLCU.model.lolCosmetics.v1.impl.CosmeticsV1Impl;
+import com.julianw03.poroLCU.model.lolDrops.v1.DropsV1;
+import com.julianw03.poroLCU.model.lolDrops.v1.impl.DropsV1Impl;
 
 import java.util.HashMap;
 
@@ -53,6 +57,8 @@ public class Model {
         addToLookup(ClientConfigV3.class, new ClientConfigV3Impl());
         addToLookup(CollectionsV1.class, new CollectionsV1Impl());
         addToLookup(ContentTargetingV1.class, new ContentTargetingV1Impl());
+        addToLookup(CosmeticsV1.class, new CosmeticsV1Impl());
+        addToLookup(DropsV1.class, new DropsV1Impl());
     }
 
     private static <T extends PluginInterface> void addToLookup(Class<T> clazz, T obj) {

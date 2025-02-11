@@ -5,12 +5,13 @@ import com.julianw03.poroLCU.model.lolChampions.v1.Champion;
 import lombok.Getter;
 
 import java.util.List;
+import java.util.UUID;
 
 @Getter
 public class Companion extends Item {
     @Getter
     public static class StarShardsPrice {
-        private String  offerId;
+        private UUID    offerId;
         private Integer price;
 
         private StarShardsPrice() {
