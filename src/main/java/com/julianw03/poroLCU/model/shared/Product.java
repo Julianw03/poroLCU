@@ -12,5 +12,7 @@ public enum Product {
     @JsonProperty("valorant")
     VALORANT,
     @JsonProperty("ritoplus")
-    RIOT_MOBILE
+    RIOT_MOBILE,
+    @JsonProperty("wildrift")
+    WILD_RIFT
 }

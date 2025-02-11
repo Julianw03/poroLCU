@@ -60,6 +60,11 @@ public class ChallengeData {
     private boolean                            isReverseDirection;
     private Map<ChallengeLevel, String>        levelToIconPath;
     private String                             name;
+    /**
+     * Sadly this field is sometimes empty and therefore leads to a deserialization error, therefore we use a String here
+     *
+     * @implNote You may use {@link ChallengeLevel#fromString} to convert it to a ChallengeLevel
+     */
     private ChallengeLevel                     nextLevel;
     private String                             nextLevelIconPath;
     private int                                nextThreshold;

@@ -9,7 +9,7 @@ import java.io.IOException;
 public class PuuidDeserializer extends JsonDeserializer<Puuid> {
     @Override
     public Puuid deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {
-        String value = jsonParser.readValueAs(String.class);
+        String value = jsonParser.getText();
         return new Puuid(value);
     }
 }
